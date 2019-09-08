@@ -2,6 +2,15 @@
 
 FilesWatcher Core .. 
 
+explain about ConfigValueProvider
+
+wrap as a seperate DLL (algorithm of FSW multiple events...)
+
+logic to deal with multiple (and same time) events....
+
+
+Microsoft.Extentions.Configuration
+
 ## Main Logic
 
 ```
