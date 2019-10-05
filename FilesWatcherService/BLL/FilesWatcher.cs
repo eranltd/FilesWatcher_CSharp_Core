@@ -104,7 +104,8 @@ namespace FilesWatcherService.BLL
             // Watch for changes in LastAccess and LastWrite times, and
             // the renaming of files or directories.
 
-            _watcher.NotifyFilter = NotifyFilters.Size | NotifyFilters.CreationTime | NotifyFilters.LastWrite | NotifyFilters.LastAccess;
+            _watcher.NotifyFilter = NotifyFilters.Size | NotifyFilters.CreationTime |
+                                                    NotifyFilters.LastWrite | NotifyFilters.LastAccess;
 
 
             _watcher.Filter = "*.*";

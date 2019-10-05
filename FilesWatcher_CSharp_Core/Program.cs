@@ -11,13 +11,15 @@ namespace FilesWatcher_CSharp_Core
         static void Main(string[] args)
         {
             Run();
-            Console.WriteLine("File System Wathcer has been started, press any key to exit...");
+            Console.WriteLine("File System Watcher has been started, press any key to exit...");
             Console.ReadKey();
         }
 
 
         public static void Run()
         {
+            //get folder to watch path from appsettings.json
+
             var FSWSource = ConfigValueProvider.Get("FSW:FSWSource");
 
             //get file types from appsettings.json
@@ -34,21 +36,16 @@ namespace FilesWatcher_CSharp_Core
 
         private static void OnNewMessage(object sender, string str)
         {
-            Console.WriteLine(str);
+            Console.WriteLine(str); //or write to a logger...
         }
 
 
         private static void OnFileReady(object sender, FileChangeEventArgs e)
         {
-            //log file ready event
-
-            //call web api to report
-
-            //write to screen about file ready.
-
-
-
-
-        }
+			//case 1 : you can log file ready event
+            //case 2: you can call web api to report
+            //case 3 : you can write to the screen        
     }
 }
+}
+
